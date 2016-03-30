@@ -1,0 +1,58 @@
+
+---
+api_v1_sightings:
+  columns:
+  - id
+  - sighting_bird_type
+  - sighting_bird_age
+  - sighting_activity
+  - sighting_has_nest
+  - sighting_latitude
+  - sighting_longitude
+  - created_at
+  - updated_at
+  records:
+  - - 1
+    -
+    -
+    -
+    - false
+    -
+    -
+    - '2016-03-29 20:50:46.719980'
+    - '2016-03-29 20:50:46.719980'
+  - - 2
+    - 1
+    - juvenile
+    - feeding
+    - true
+    - 32.0
+    - -79.0505069
+    - '2016-03-29 20:53:02.939153'
+    - '2016-03-29 20:53:02.939153'
+
+---
+api_v1_birds:
+  columns:
+  - id
+  - bird_name
+  - bird_scientific_name
+  - bird_genus
+  - bird_endangered
+  - created_at
+  - updated_at
+  records:
+  - - 1
+    - Bald Eagle
+    - leucocephalus haaleitus
+    - raptor
+    - false
+    - '2016-03-29 20:55:05.928869'
+    - '2016-03-29 20:55:05.928869'
+  - - 2
+    - Barn Owl
+    - tito alba
+    - owl
+    - false
+    - '2016-03-29 20:55:30.248055'
+    - '2016-03-29 20:55:30.248055'
