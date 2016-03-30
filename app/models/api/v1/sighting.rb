@@ -1,3 +1,6 @@
 class Api::V1::Sighting < ActiveRecord::Base
-  belongs_to :api_v1_birds
+  has_one                       :api_v1_bird
+  accepts_nested_attributes_for :api_v1_bird
+
+
 end

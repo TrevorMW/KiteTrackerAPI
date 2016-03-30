@@ -2,11 +2,14 @@ class Api::V1::SightingsController < ApplicationController
   before_action :set_api_v1_sighting, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, :with => :no_record
 
+
   def index
-    @sightings = Api::V1::Sighting.all
+    @sightings = Api::V1::Sighting.all()
 
     if @sightings
-      render 'index', formats: [:json]
+      respond_to do |format|
+        format.json
+      end
     end
   end
 
@@ -14,8 +17,8 @@ class Api::V1::SightingsController < ApplicationController
     @sighting = Api::V1::Sighting.find( params[:id] )
     @bird     = Api::V1::Bird.find( @sighting.sighting_bird_type )
 
-    if @sighting && @bird
-      render 'show', formats: [:json]
+    respond_to do |format|
+      format.json
     end
   end
 
